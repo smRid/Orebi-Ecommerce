@@ -40,7 +40,7 @@ const Navbar = () => {
             {
                 show && (
                     <div className="menu py-7 px-4 lg:py-0 absolute lg:px-0 left-0 top-full bg-slate-200 lg:static lg:bg-transparent flex w-full justify-center ">
-                      <ul className='flex items-center flex-col gap-y-2 lg:flex-row gap-x-[40px]'>
+                      <ul className='flex z-10 items-center flex-col gap-y-2 lg:flex-row gap-x-[40px]'>
                          <Listitem href="/" text="Home"/>
                          <Listitem href="/" text="Shop"/>
                          <Listitem href="/" text="About"/>
