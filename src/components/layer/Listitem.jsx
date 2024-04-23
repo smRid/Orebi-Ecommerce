@@ -1,21 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// const Listitem = ({text,href, className}) => {
-//   return (
-//     <li className='group'>
-//         <Link className={` text-[#767676] font-DM text-sm font-[700] hover:text-[black] transition-all duration-300 ${className}`} to={href} >
-//             {text}
-//         </Link>
-//     </li>
-//   )
-// }
 
 const Listitem = ({ href, text, className }) => {
   return (
     <li>
       <Link
-        className={`font-DM text-[#767676] text-sm hover:text-black transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-slate-400 relative hover:after:w-full after:transition-all after:duration-300 ${className}`}
+        className={`block font-DM text-[#767676] text-sm hover:text-black transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-slate-400 relative hover:after:w-full after:transition-all after:duration-300 ${className}`}
         to={href}
       >
         {text}
