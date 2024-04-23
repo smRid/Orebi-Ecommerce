@@ -2,16 +2,16 @@ import React from 'react'
 import Navbar from '../Navbar'
 import SearchBar from '../SearchBar'
 import { Outlet } from 'react-router-dom'
-
+import Footer from '../Footer'
 
 const RootLayout = () => {
   return (
-    <>
+    <div>
       <Navbar/>
       <SearchBar/>
       <Outlet/>
-      <p className='py-4 bg-slate-800 text-gray-300 text-center mt-80'>Footer components</p>
-    </>
+      <Footer/>
+    </div>
   )
 }
 
