@@ -74,7 +74,7 @@ const SearchBar = () => {
               <div className="account absolute w-36 top-full py-5 bg-black"></div>
               <div className="logout"></div>
           </div>
-          <div ref={cartRef} className="relative">
+          <div ref={cartRef} className="relative cursor-pointer">
             <FaShoppingCart />
               {cart && (
               <div className="cart w-[360px] absolute right-0 top-full translate-y-[15px] z-10">
