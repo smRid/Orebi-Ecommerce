@@ -1,28 +1,47 @@
-import React from "react";
-import Container from "./layer/Container";
-import { PiNumberTwoBold } from "react-icons/pi";
-import { FaTruck } from "react-icons/fa";
-import { SlReload } from "react-icons/sl";
+import Breadcrumb from '../layer/Breadcrumb';
+import Container from '../layer/Container';
+import ProductFilter from '../layer/ProductFilter';
+import ProductItem from '../layer/ProductItem';
+import ProductPageTop from "../layer/ProductPageTop";
 
-const BannerBottom = () => {
+
+const Product = () => {
+
   return (
-    <div className="border-b border-[#F0F0F0]">
-      <Container className="py-5 flex justify-between items-center">
-        <p className="flex items-center gap-x-2 font-normal text-base text-[#6D6D6D]">
-          <PiNumberTwoBold className="text-black text-xl" />
-          Two years warranty
-        </p>
-        <p className="flex items-center gap-x-2 font-normal text-base text-[#6D6D6D]">
-          <FaTruck className="text-black text-xl" />
-          Two years warranty
-        </p>
-        <p className="flex items-center gap-x-2 font-normal text-base text-[#6D6D6D]">
-          <SlReload className="text-black text-xl rotate-90" />
-          Return policy in 30 days
-        </p>
+    <div>
+      <Container>
+        <div className="header py-32 ">
+          <h2 className="font-bold font-DM text-[49px]">Products</h2>
+          <Breadcrumb />
+        </div>
+        <div className="main flex justify-between">
+          <div className="sidebar w-[370px] bg-slate-100">
+            <ProductFilter catTitle="Shop by Category" />
+            <ProductFilter catTitle="Shop by Color" />
+          </div>
+
+          <div className="products w-[1190px] bg-slate-200 flex flex-wrap gap-x-10 gap-y-12">
+            <ProductPageTop />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <ProductItem />
+            <div className='w-full flex justify-between'>
+              <p></p>
+              <p>Products from 1 to 12 of 80</p>
+            </div>
+          </div>
+        </div>
       </Container>
     </div>
   );
-};
+}
 
-export default BannerBottom;
+export default Product
