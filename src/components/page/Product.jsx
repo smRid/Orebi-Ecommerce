@@ -30,9 +30,7 @@ const Product = () => {
             <ProductItem />
             <ProductItem />
             <ProductItem />
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
+            
             <div className='w-full flex justify-between'>
               <p></p>
               <p>Products from 1 to 12 of 80</p>
