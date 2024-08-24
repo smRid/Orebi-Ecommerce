@@ -48,6 +48,3 @@ To set up the project locally, follow these steps:
   - **page/**: Different pages of the website.
   - **App.js**: Main application component.
 
-## Contact
-For any questions or inquiries, please reach out:
-- **Email**: [shariar.rafi364@gmail.com](mailto:shariar.rafi364@gmail.com)
