@@ -1,94 +1,54 @@
-import React from 'react'
+import React from "react";
+import Home from "./components/page/Home";
 
 import {
   createRoutesFromElements,
   createBrowserRouter,
   Route,
-  RouterProvider
+  RouterProvider,
 } from "react-router-dom";
 
-import RootLayouts from './components/RootLayouts'
-import ErrorPage from './pages/ErrorPage'
-import HomePage from './pages/HomePage'
-import SignupPage from './pages/SignupPage'
-import CheckoutPage from './pages/CheckoutPage'
-import LoginPage from './pages/LoginPage'
-import ContactsPage from './pages/ContactsPage'
-import AboutPage from './pages/AboutPage'
-import ProductsPage from './pages/ProductsPage'
-import ProductDetailsPage from './pages/ProductDetailsPage'
-import MyAccountPage from './pages/MyAccountPage'
-import CartPage from './pages/CartPage'
+import RootLayout from "./components/layer/RootLayout";
+import Product from "./components/page/Product";
+import About from "./components/page/About";
+import Contacts from "./components/page/Contacts";
+import Login from "./components/page/Login";
+import Signup from "./components/page/Signup";
+import Myaccount from "./components/page/Myaccount";
+import Cart from "./components/page/Cart";
+import Checkout from "./components/page/Checkout";
+import Error from "./components/page/Error";
+import ProductInside from "./components/page/ProductInside";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-   <>
-    <Route
-      path="/"
-      element={<RootLayouts />}>
-         <Route
-             path="/"
-             element={<HomePage />}
-         ></Route>
 
-          <Route
-             path="/products"
-             element={<ProductsPage />}
-         ></Route>
-          <Route
-             path="/product"
-             element={<ProductDetailsPage />}
-         ></Route>
+const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route
+        path="/"
+        element={<RootLayout/>}
+        // errorElement={<Error />}
+      >
+        <Route index element={<Home/>} ></Route>
+        <Route path="/shop" element={<Product/>}></Route>
+        <Route path="/about" element={<About/>} ></Route>
+        <Route path="/contacts" element={<Contacts/>} ></Route>
+        <Route path="/login" element={<Login/>} ></Route>
+        <Route path="/signup" element={<Signup/>} ></Route>
+        <Route path="/myaccount" element={<Myaccount/>} ></Route>
+        <Route path="/cart" element={<Cart/>} ></Route>
+        <Route path="/checkout" element={<Checkout/>} ></Route>
+        <Route path="/error" element={<Error/>} ></Route>
+        <Route path="/productinside" element={<ProductInside/>} ></Route>
 
-          <Route
-              path="/about"
-              element={<AboutPage />}
-          ></Route>
-
-          <Route
-              path="/contacts"
-              element={<ContactsPage />}
-          ></Route>
-          
-          <Route
-              path="/login"
-              element={<LoginPage />}
-          ></Route>
-
-          <Route
-             path="/sign-up"
-             element={<SignupPage />}
-         ></Route>
-
-          <Route
-             path="/my-account"
-             element={<MyAccountPage />}
-         ></Route>
-          <Route
-             path="/cart"
-             element={<CartPage />}
-         ></Route>
-
-         <Route
-             path="/checkout"
-             element={<CheckoutPage />}
-         ></Route>
-         <Route
-             path="*"
-             element={<ErrorPage />}
-         ></Route>
-    </Route>
-   
-   </>
-  )
-);
-
-export default function App() {
-
- 
+      </Route>
+    )
+  );
   return (
    <>
-   <RouterProvider router={router} />
-    </>
+     <RouterProvider router={router} />
+   </>
   )
 }
+
+export default App
