@@ -34,7 +34,7 @@ Orebi Ecommerce is a modern, full-featured e-commerce platform that provides a s
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
-    git clone https://github.com/smRid/Orebi-Ecommerce.git
+    git clone https://github.com/smRid/Modern-Restaurant-App.git
 
 2. **Install dependencies:**
     npm i
